@@ -159,3 +159,31 @@ h1 {
   color: #666;
   font-size: 1.1rem;
 }
+.forecast-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.forecast-card {
+  background: #f5f7ff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.forecast-card:hover {
+  transform: translateY(-4px);
+}
+
+.forecast-card img {
+  width: 60px;
+}
+
+@media (max-width: 600px) {
+  .forecast-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
